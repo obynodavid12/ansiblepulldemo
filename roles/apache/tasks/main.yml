@@ -1,0 +1,10 @@
+- name: Install Apache2 web server
+  yum:
+    name: httpd
+    state: present
+
+- name: Ensure that Apache2 is up and running and will autostart on system boot
+  service:
+    name: httpd
+    state: started
+    enabled: true
